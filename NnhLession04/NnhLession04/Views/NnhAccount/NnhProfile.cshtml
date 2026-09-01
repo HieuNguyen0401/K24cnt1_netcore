@@ -1,0 +1,69 @@
+﻿@{
+    ViewData["Title"] = "Profile";
+
+    var profile = ViewBag.NnhAccount as NnhLession04.Models.NnhAccount;
+}
+
+@if (profile != null)
+{
+    <div class="row">
+
+        <div class="col-md-4">
+            <div>
+                <img src="@profile.Avatar"
+                     alt="@profile.Name"
+                     style="width: 100%; max-width: 300px;" />
+            </div>
+        </div>
+
+        <div class="col-md-8">
+
+            <div class="card">
+                <div class="card-body">
+
+                    <h3>FullName: @profile.Name</h3>
+
+                    <p>Email: @profile.Email</p>
+
+                    <p>Address: @profile.Address</p>
+
+                    <p>Phone: @profile.Phone</p>
+
+                    <p>Bio: @profile.Bio</p>
+
+                    <p>
+                        Gender:
+                        @if (profile.Gender == 1)
+                        {
+                            <text>Nam</text>
+                        }
+                        else
+                        {
+                            <text>Nữ</text>
+                        }
+                    </p>
+
+                    <p>
+                        Birthday:
+                        @profile.Birthday.ToString("dd/MM/yyyy")
+                    </p>
+
+                    <p>
+                        <a asp-controller="NnhAccount"
+                           asp-action="NnhIndex"
+                           class="btn btn-danger">
+                            Back to list
+                        </a>
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+}
+else
+{
+    <h3>Không tìm thấy tài khoản!</h3>
+}
