@@ -1,0 +1,31 @@
+﻿@model List<NnhLession04.Models.NnhProduct>
+
+<div class="product-box hot-product">
+
+    <div class="product-title">
+        Sản phẩm bán chạy
+    </div>
+
+    <div class="product-list">
+
+        @foreach (var product in Model)
+        {
+            <div class="product-card">
+
+                <img src="@product.Image"
+                     alt="@product.Name" />
+
+                <div class="product-name">
+                    @product.Name
+                </div>
+
+                <div class="product-price">
+                    @product.Price.ToString("N0") đ
+                </div>
+
+            </div>
+        }
+
+    </div>
+
+</div>
