@@ -1,0 +1,36 @@
+﻿@{
+    var categories = new[]
+    {
+        "Áo dài",
+        "Áo đông",
+        "Tủ lạnh",
+        "Điện thoại",
+        "Ví da",
+        "Thiết bị gia dụng",
+        "Tủ lạnh",
+        "Tivi",
+        "Quạt điện",
+        "Loa bluetooth"
+    };
+}
+
+<div class="category-box">
+
+    <div class="box-title">
+        Danh mục sản phẩm
+    </div>
+
+    <ul>
+
+        @foreach (var category in categories)
+        {
+            <li>
+                <a href="#">
+                    @category
+                </a>
+            </li>
+        }
+
+    </ul>
+
+</div>

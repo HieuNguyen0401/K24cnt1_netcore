@@ -1,0 +1,56 @@
+﻿@model List<NnhProduct>
+
+<div class="layout-grid">
+
+    <!-- DANH MỤC SẢN PHẨM -->
+
+    <aside>
+
+        @await Html.PartialAsync("_CategoryPartial")
+
+    </aside>
+
+
+    <!-- NỘI DUNG -->
+
+    <section class="content">
+
+        <div class="section-title">
+            Sản phẩm mới nhất
+        </div>
+
+
+        <div class="product-grid">
+
+            @foreach (var nnhProduct in Model)
+            {
+                <div class="product-card">
+
+                    <img src="@nnhProduct.Image"
+                         alt="@nnhProduct.Name" />
+
+                    <h3>
+                        @nnhProduct.Name
+                    </h3>
+
+                    <p class="price">
+                        @nnhProduct.Price.ToString("N0") đ
+                    </p>
+
+                </div>
+            }
+
+        </div>
+
+
+        <!-- VIEW COMPONENT -->
+
+        <div class="section-title">
+            Sản phẩm nổi bật
+        </div>
+
+        @await Component.InvokeAsync("NnhHotProduct")
+
+    </section>
+
+</div>

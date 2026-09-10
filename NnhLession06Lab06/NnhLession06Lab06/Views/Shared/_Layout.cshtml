@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0" />
+
+    <title>DEMO LAB</title>
+
+    <link rel="stylesheet"
+          href="~/css/site.css" />
+
+    @RenderSection("Styles", required: false)
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <header class="topbar">
+
+        <div class="logo">
+            DEMO LAB
+        </div>
+
+        <nav>
+
+            <a asp-controller="Home"
+               asp-action="Index"
+               class="active">
+                Trang chủ
+            </a>
+
+            <a href="#">
+                Giới thiệu
+            </a>
+
+            <a href="#">
+                Liên hệ
+            </a>
+
+            <a href="#">
+                Sản phẩm
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- NỘI DUNG -->
+    <main class="container">
+
+        @RenderBody()
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer-item">
+
+            <h3>
+                GIỚI THIỆU
+            </h3>
+
+            <p>
+				Chào mừng bạn đến với trang web của chúng tôi. Chúng tôi cung cấp các sản phẩm chất lượng cao và dịch vụ tốt nhất cho khách hàng.
+            </p>
+
+        </div>
+
+
+        <div class="footer-item">
+
+            <h3>
+                LIÊN HỆ
+            </h3>
+
+            <p>
+                <h1>Nguyễn Ngọc Hiếu</h1>
+                <h2>Email:Taodeptrai@gmail.com</h2>
+                Nơi làm việc: Fit NTU.
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

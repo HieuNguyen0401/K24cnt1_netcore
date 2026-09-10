@@ -1,0 +1,23 @@
+﻿@model List<NnhProduct>
+
+<div class="product-grid">
+
+    @foreach (var nnhProduct in Model)
+    {
+        <div class="product-card">
+
+            <img src="@nnhProduct.Image"
+                 alt="@nnhProduct.Name" />
+
+            <h3>
+                @nnhProduct.Name
+            </h3>
+
+            <p class="price">
+                @nnhProduct.Price.ToString("N0") đ
+            </p>
+
+        </div>
+    }
+
+</div>
