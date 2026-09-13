@@ -1,0 +1,20 @@
+﻿@{
+	ViewData["Title"] = "Thong tin memmber";	
+	var member = ViewBag.Member as NnhLession07Models.Models.DataModels.NnhMember;
+}
+
+<div class="alert alert-info"> 
+	@* <h1>ViewData["Title"]</h1>
+	<p> Member id :@ViewBag.Member.NnhMemberId</p>
+	<p> Username :@ViewBag.Member.NnhUserName</p>
+	<p> Password :@ViewBag.Member.NnhPassword</p>
+	<p> Fullname :@ViewBag.Member.NnhFullname</p>
+	<p> Email :@ViewBag.Member.NnhEmail</p> *@
+
+	<h1>ViewData["Title"]</h1>
+	<p> Member id :@member.NnhMemberId</p>
+	<p> Username :@member.NnhUserName</p>
+	<p> Password :@member.NnhPassword</p>
+	<p> Fullname :@member.NnhFullname</p>
+	<p> Email :@member.NnhEmail</p>
+</div>

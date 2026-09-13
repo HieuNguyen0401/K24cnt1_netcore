@@ -1,0 +1,65 @@
+﻿@model IEnumerable<NnhLession07Models.Models.DataModels.NnhMember>
+
+@{
+    ViewData["Title"] = "Danh sách thành viên";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="card p-3">
+
+    <p>
+        <a asp-action="Create" class="btn btn-primary my-1">Them moi</a>
+    </p>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.NnhMemberId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NnhUserName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NnhPassword)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NnhFullname)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NnhEmail)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NnhMemberId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NnhUserName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NnhPassword)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NnhFullname)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NnhEmail)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+       
