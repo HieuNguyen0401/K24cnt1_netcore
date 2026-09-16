@@ -1,0 +1,60 @@
+@model NnhLession08Models.Models.NnhMember
+
+@{
+    ViewData["Title"] = "Thêm mới";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h1>@ViewData["Title"]</h1>
+    </div>
+
+    <form asp-action="NnhCreate" method="post">
+
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-4">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <div class="form-group">
+                        <label asp-for="NnhMemberId" class="control-label"></label>
+                        <input asp-for="NnhMemberId" class="form-control" />
+                        <span asp-validation-for="NnhMemberId" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="NnhUserName" class="control-label"></label>
+                        <input asp-for="NnhUserName" class="form-control" />
+                        <span asp-validation-for="NnhUserName" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="NnhPassword" class="control-label"></label>
+                        <input asp-for="NnhPassword" class="form-control" />
+                        <span asp-validation-for="NnhPassword" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="NnhFullname" class="control-label"></label>
+                        <input asp-for="NnhFullname" class="form-control" />
+                        <span asp-validation-for="NnhFullname" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="NnhEmail" class="control-label"></label>
+                        <input asp-for="NnhEmail" class="form-control" />
+                        <span asp-validation-for="NnhEmail" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-footer">
+            <div class="form-group">
+                <input type="submit" value="Ghi lại" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+            </div>
+        </div>
+
+    </form>
+</div>
