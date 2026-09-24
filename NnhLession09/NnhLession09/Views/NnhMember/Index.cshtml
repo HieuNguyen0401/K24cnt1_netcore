@@ -1,0 +1,75 @@
+﻿@model IEnumerable<NnhLession09.Models.DataModels.NnhMember>
+
+@{
+    ViewData["Title"] = "Danh sách thành viên";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Create New</a>
+</p>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NnhMemberId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NnhUserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NnhPassword)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NnhEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NnhPhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NnhFullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NnhBirthday)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Any())
+        {
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NnhMemberId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NnhUserName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NnhPassword)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NnhEmail)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NnhPhoneNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NnhFullName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NnhBirthday)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.NnhMemberId">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.NnhMemberId">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.NnhMemberId">Delete</a>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

@@ -1,0 +1,71 @@
+﻿@model NnhLession09.Models.DataViewModels.NnhMemberRegister
+
+@{
+    ViewData["Title"] = "Thêm mới thành viên";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<h4>NnhMemberRegister</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group mb-3">
+                <label asp-for="NnhMemberId" class="control-label"></label>
+                <input asp-for="NnhMemberId" class="form-control" />
+                <span asp-validation-for="NnhMemberId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="NnhUserName" class="control-label"></label>
+                <input asp-for="NnhUserName" class="form-control" />
+                <span asp-validation-for="NnhUserName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="NnhPassword" class="control-label"></label>
+                <input asp-for="NnhPassword" class="form-control" type="password" />
+                <span asp-validation-for="NnhPassword" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="NnhEmail" class="control-label"></label>
+                <input asp-for="NnhEmail" class="form-control" />
+                <span asp-validation-for="NnhEmail" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="NnhPhoneNumber" class="control-label"></label>
+                <input asp-for="NnhPhoneNumber" class="form-control" />
+                <span asp-validation-for="NnhPhoneNumber" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="NnhFullName" class="control-label"></label>
+                <input asp-for="NnhFullName" class="form-control" />
+                <span asp-validation-for="NnhFullName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="NnhBirthday" class="control-label"></label>
+                <input asp-for="NnhBirthday" class="form-control" type="date" />
+                <span asp-validation-for="NnhBirthday" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mt-3">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="mt-3">
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
