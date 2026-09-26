@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "Trang chủ";
+}
+
+<div class="container">
+
+    <div class="home-welcome">
+
+        <div class="home-content">
+
+            <span class="home-badge">
+                HỆ THỐNG QUẢN LÝ SINH VIÊN
+            </span>
+
+            <h1>
+                Chào mừng đến với
+                <br />
+                hệ thống quản lý sinh viên
+            </h1>
+
+            <p>
+                Quản lý thông tin sinh viên một cách
+                nhanh chóng, chính xác và thuận tiện.
+            </p>
+
+            <div class="home-buttons">
+
+                <a asp-controller="NnhStudents"
+                   asp-action="Index"
+                   class="btn btn-primary">
+                    Xem danh sách sinh viên
+                </a>
+
+                <a asp-controller="Home"
+                   asp-action="NnhAbout"
+                   class="btn btn-outline-primary">
+                    Thông tin sinh viên
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="home-icon">
+            🎓
+        </div>
+
+    </div>
+
+</div>

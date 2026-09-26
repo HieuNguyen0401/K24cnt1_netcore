@@ -1,0 +1,506 @@
+/* =========================
+   GENERAL
+   ========================= */
+
+html {
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #f4f7fb;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #212529;
+}
+
+
+/* =========================
+   NAVBAR
+   ========================= */
+
+.navbar {
+    min-height: 65px;
+    background: linear-gradient(135deg, #0d6efd, #084298) !important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+.navbar-brand {
+    font-size: 20px;
+    font-weight: 700;
+    color: white !important;
+}
+
+.navbar .nav-link {
+    color: white !important;
+    font-weight: 500;
+    padding: 10px 15px !important;
+    margin-left: 5px;
+    border-radius: 7px;
+    transition: all 0.25s ease;
+}
+
+    .navbar .nav-link:hover {
+        background-color: rgba(255, 255, 255, 0.18);
+        transform: translateY(-1px);
+    }
+
+
+/* =========================
+   MAIN
+   ========================= */
+
+.main-content {
+    min-height: calc(100vh - 130px);
+    padding-top: 35px;
+    padding-bottom: 45px;
+}
+
+
+/* =========================
+   STUDENT ABOUT PAGE
+   ========================= */
+
+.about-page {
+    padding: 20px 0 50px 0;
+}
+
+.student-card {
+    max-width: 850px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.09);
+}
+
+
+/* =========================
+   STUDENT HEADER
+   ========================= */
+
+.student-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+    background: linear-gradient( 135deg, #0d6efd, #084298 );
+    color: white;
+}
+
+.student-avatar {
+    width: 85px;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: white;
+    color: #0d6efd;
+    font-size: 24px;
+    font-weight: 700;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.student-header h1 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.student-header p {
+    margin: 6px 0 0;
+    opacity: 0.85;
+}
+
+
+/* =========================
+   STUDENT INFORMATION
+   ========================= */
+
+.student-info {
+    padding: 25px 30px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    padding: 18px 10px;
+    border-bottom: 1px solid #edf0f5;
+    transition: all 0.2s ease;
+}
+
+    .info-item:last-child {
+        border-bottom: none;
+    }
+
+    .info-item:hover {
+        background-color: #f8faff;
+        border-radius: 8px;
+        padding-left: 16px;
+    }
+
+.info-icon {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    background-color: #eaf2ff;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.info-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+    .info-content span {
+        font-size: 13px;
+        color: #6c757d;
+    }
+
+    .info-content strong {
+        font-size: 17px;
+        color: #212529;
+    }
+
+    .info-content a {
+        font-size: 16px;
+        color: #0d6efd;
+        text-decoration: none;
+    }
+
+        .info-content a:hover {
+            text-decoration: underline;
+        }
+
+
+/* =========================
+   STUDENT FOOTER
+   ========================= */
+
+.student-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 30px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #edf0f5;
+    color: #6c757d;
+    font-size: 14px;
+}
+
+
+/* =========================
+   CARD
+   ========================= */
+
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
+}
+
+.card-header {
+    border-radius: 12px 12px 0 0 !important;
+    padding: 16px 20px;
+}
+
+.card-body {
+    padding: 25px;
+}
+
+
+/* =========================
+   TABLE
+   ========================= */
+
+.table {
+    background-color: white;
+}
+
+    .table th {
+        vertical-align: middle;
+        font-weight: 600;
+    }
+
+    .table td {
+        vertical-align: middle;
+    }
+
+.table-hover tbody tr:hover {
+    background-color: #f5f8ff;
+}
+
+
+/* =========================
+   BUTTON
+   ========================= */
+
+.btn {
+    border-radius: 7px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+    .btn:hover {
+        transform: translateY(-1px);
+    }
+
+
+/* =========================
+   FORM
+   ========================= */
+
+.form-label {
+    font-weight: 600;
+}
+
+.form-control,
+.form-select {
+    min-height: 42px;
+    border-radius: 7px;
+}
+
+    .form-control:focus,
+    .form-select:focus {
+        border-color: #0d6efd;
+        box-shadow: 0 0 0 0.15rem rgba(13, 110, 253, 0.15);
+    }
+
+
+/* =========================
+   BADGE
+   ========================= */
+
+.badge {
+    padding: 7px 10px;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.footer {
+    border-top: 1px solid #e1e5ea;
+}
+
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 768px) {
+
+    .student-header {
+        padding: 25px;
+    }
+
+    .student-avatar {
+        width: 65px;
+        height: 65px;
+        font-size: 18px;
+    }
+
+    .student-header h1 {
+        font-size: 23px;
+    }
+
+    .student-info {
+        padding: 15px;
+    }
+
+    .student-footer {
+        flex-direction: column;
+        gap: 5px;
+        padding: 15px 20px;
+    }
+}
+/* =========================================
+   TRANG CHU
+   ========================================= */
+
+.home-welcome {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 55px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.home-content {
+    max-width: 650px;
+}
+
+.home-badge {
+    display: inline-block;
+    padding: 7px 13px;
+    margin-bottom: 18px;
+    background: #eaf2ff;
+    color: #0d6efd;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.home-content h1 {
+    margin: 0 0 18px;
+    font-size: 42px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.home-content p {
+    margin-bottom: 25px;
+    color: #6b7280;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.home-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+    .home-buttons .btn {
+        padding: 11px 18px;
+        border-radius: 8px;
+        font-weight: 600;
+    }
+
+.home-icon {
+    width: 180px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+    border-radius: 50%;
+    background: #eaf2ff;
+    font-size: 80px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .home-welcome {
+        margin: 25px auto;
+        padding: 35px 25px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .home-content h1 {
+        font-size: 30px;
+    }
+
+    .home-icon {
+        width: 120px;
+        height: 120px;
+        margin: 30px 0 0;
+        font-size: 55px;
+    }
+
+    .home-buttons {
+        flex-direction: column;
+    }
+}
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.main-footer {
+    margin-top: 60px;
+    background: #0f172a;
+    color: #cbd5e1;
+    padding-top: 40px;
+}
+
+
+/* NOI DUNG FOOTER */
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding-bottom: 30px;
+}
+
+
+/* COT */
+
+.footer-column h5 {
+    margin-bottom: 18px;
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.footer-column p {
+    margin-bottom: 9px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-column strong {
+    color: #e2e8f0;
+}
+
+
+/* DUONG KE */
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+    border-top: 1px solid #334155;
+    font-size: 13px;
+}
+
+    .footer-bottom a {
+        color: #60a5fa;
+        text-decoration: none;
+    }
+
+        .footer-bottom a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+}
