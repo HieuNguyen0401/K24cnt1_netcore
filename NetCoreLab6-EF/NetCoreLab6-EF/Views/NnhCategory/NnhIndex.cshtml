@@ -1,0 +1,68 @@
+@model IEnumerable<NetCoreLab6_EF.Models.NnhCategory>
+
+@{
+    ViewData["Title"] = "Danh sách danh mục";
+}
+
+<h2>Danh sách danh mục</h2>
+
+<p>
+    <a class="btn btn-success" asp-action="NnhCreate">
+        Thêm mới danh mục
+    </a>
+</p>
+
+<table class="table table-bordered table-striped">
+
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NnhName)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.NnhStatus)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.NnhCreatedDate)
+            </th>
+
+            <th>
+                Chức năng
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.NnhName)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.NnhStatus)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.NnhCreatedDate)
+                </td>
+
+                <td>
+                    <a class="btn btn-sm btn-primary"
+                       asp-action="NnhEdit"
+                       asp-route-id="@item.NnhId">
+                        Sửa
+                    </a>
+                </td>
+
+            </tr>
+        }
+
+    </tbody>
+
+</table>

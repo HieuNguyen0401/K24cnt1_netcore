@@ -1,0 +1,47 @@
+@model NetCoreLab6_EF.Models.NnhCategory
+
+@{
+    ViewData["Title"] = "Chỉnh sửa danh mục";
+}
+
+<h2>Chỉnh sửa danh mục</h2>
+
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="NnhEdit" method="post">
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <input type="hidden" asp-for="NnhId" />
+
+            <div class="form-group">
+                <label asp-for="NnhName" class="control-label"></label>
+                <input asp-for="NnhName" class="form-control" />
+                <span asp-validation-for="NnhName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="NnhStatus" class="control-label"></label>
+                <input asp-for="NnhStatus" class="form-control" />
+                <span asp-validation-for="NnhStatus" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mt-3">
+                <input type="submit" value="Cập nhật" class="btn btn-success" />
+
+                <a asp-action="NnhIndex" class="btn btn-danger">
+                    Quay lại
+                </a>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
