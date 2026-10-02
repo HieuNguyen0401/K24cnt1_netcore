@@ -1,0 +1,59 @@
+@model IEnumerable<NnhStudentManager.Models.NnhStudentClass>
+
+@{
+    ViewData["Title"] = "Danh sách lớp";
+}
+
+<div class="container mt-4">
+
+    <h1>@ViewData["Title"]</h1>
+
+    <p>
+        <a asp-action="Create" class="btn btn-primary">
+            Thêm lớp mới
+        </a>
+    </p>
+
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.NnhClassName)
+                </th>
+                <th>Chức năng</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NnhClassName)
+                    </td>
+
+                    <td>
+                        <a asp-action="Edit"
+                           asp-route-id="@item.Id"
+                           class="btn btn-warning btn-sm">
+                            Sửa
+                        </a>
+
+                        <a asp-action="Details"
+                           asp-route-id="@item.Id"
+                            class="btn btn-info btn-sm">
+                            Chi tiết
+                        </a>
+
+                        <a asp-action="Delete"
+                           asp-route-id="@item.Id"
+                           class="btn btn-danger btn-sm">
+                            Xóa
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>

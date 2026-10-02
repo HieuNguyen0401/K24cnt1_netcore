@@ -1,0 +1,74 @@
+@model NnhStudentManager.Models.NnhStudent
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>NnhStudent</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="NnhStudentName" class="control-label"></label>
+                <input asp-for="NnhStudentName" class="form-control" />
+                <span asp-validation-for="NnhStudentName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NnhStudentEmail" class="control-label"></label>
+                <input asp-for="NnhStudentEmail" class="form-control" />
+                <span asp-validation-for="NnhStudentEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NnhStudentPhone" class="control-label"></label>
+                <input asp-for="NnhStudentPhone" class="form-control" />
+                <span asp-validation-for="NnhStudentPhone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NnhStudentAddress" class="control-label"></label>
+                <input asp-for="NnhStudentAddress" class="form-control" />
+                <span asp-validation-for="NnhStudentAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NnhStudentAvatar" class="control-label"></label>
+                <input asp-for="NnhStudentAvatar" class="form-control" />
+                <span asp-validation-for="NnhStudentAvatar" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NnhStudentBirthday" class="control-label"></label>
+                <input asp-for="NnhStudentBirthday" class="form-control" />
+                <span asp-validation-for="NnhStudentBirthday" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NnhClassId" class="control-label"></label>
+                <input asp-for="NnhClassId" class="form-control" />
+                <span asp-validation-for="NnhClassId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NnhStudentClass" class="control-label"></label>
+                <input asp-for="NnhStudentClass" class="form-control" />
+                <span asp-validation-for="NnhStudentClass" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NnhMarks" class="control-label"></label>
+                <input asp-for="NnhMarks" class="form-control" />
+                <span asp-validation-for="NnhMarks" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
